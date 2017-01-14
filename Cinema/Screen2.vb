@@ -8,11 +8,11 @@
         Dim yPos As Integer = 0
         Dim n As Integer = 0
         'Dim intCounter As Integer
-        For i As Integer = 0 To 230
+        For i As Integer = 0 To btnArray.Length - 1
             ' Initialize one variable
             btnArray(i) = New System.Windows.Forms.Button
         Next i
-        While (n < 231)
+        While (n < btnArray.Length)
             With (btnArray(n))
                 .Tag = n + 1 ' Tag of button
                 .Width = 33 ' Width of button
