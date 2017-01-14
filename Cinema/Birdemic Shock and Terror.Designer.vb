@@ -35,6 +35,7 @@ Partial Class Birdemic_Shock_and_Terror
         Me.txtTotalPrice = New System.Windows.Forms.TextBox()
         Me.btnBuy = New System.Windows.Forms.Button()
         Me.btnNew = New System.Windows.Forms.Button()
+        Me.btnMvSel = New System.Windows.Forms.Button()
         CType(Me.ShkBirdemic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -145,13 +146,23 @@ Partial Class Birdemic_Shock_and_Terror
         Me.btnNew.Text = "Add Person"
         Me.btnNew.UseVisualStyleBackColor = False
         '
+        'btnMvSel
+        '
+        Me.btnMvSel.Location = New System.Drawing.Point(3, 310)
+        Me.btnMvSel.Name = "btnMvSel"
+        Me.btnMvSel.Size = New System.Drawing.Size(75, 23)
+        Me.btnMvSel.TabIndex = 13
+        Me.btnMvSel.Text = "Back"
+        Me.btnMvSel.UseVisualStyleBackColor = True
+        '
         'Birdemic_Shock_and_Terror
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(757, 309)
+        Me.ClientSize = New System.Drawing.Size(757, 338)
+        Me.Controls.Add(Me.btnMvSel)
         Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.btnBuy)
         Me.Controls.Add(Me.txtTotalPrice)
@@ -183,4 +194,5 @@ Partial Class Birdemic_Shock_and_Terror
     Friend WithEvents txtTotalPrice As System.Windows.Forms.TextBox
     Friend WithEvents btnBuy As System.Windows.Forms.Button
     Friend WithEvents btnNew As System.Windows.Forms.Button
+    Friend WithEvents btnMvSel As Button
 End Class

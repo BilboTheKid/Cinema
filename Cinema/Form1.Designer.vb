@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Login
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,13 @@ Partial Class Login
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
-        Me.txtID = New System.Windows.Forms.TextBox()
-        Me.lblID = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
@@ -67,23 +65,6 @@ Partial Class Login
         Me.lblPassword.Size = New System.Drawing.Size(53, 13)
         Me.lblPassword.TabIndex = 4
         Me.lblPassword.Text = "Password"
-        '
-        'txtID
-        '
-        Me.txtID.Location = New System.Drawing.Point(406, 12)
-        Me.txtID.Name = "txtID"
-        Me.txtID.ReadOnly = True
-        Me.txtID.Size = New System.Drawing.Size(100, 20)
-        Me.txtID.TabIndex = 17
-        '
-        'lblID
-        '
-        Me.lblID.AutoSize = True
-        Me.lblID.Location = New System.Drawing.Point(357, 15)
-        Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(43, 13)
-        Me.lblID.TabIndex = 18
-        Me.lblID.Text = "User ID"
         '
         'txtEmail
         '
@@ -127,13 +108,11 @@ Partial Class Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(517, 93)
+        Me.ClientSize = New System.Drawing.Size(320, 93)
         Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.lblEmail)
         Me.Controls.Add(Me.txtEmail)
-        Me.Controls.Add(Me.lblID)
-        Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.lblUsername)
         Me.Controls.Add(Me.txtPassword)
@@ -148,11 +127,8 @@ Partial Class Login
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents lblUsername As System.Windows.Forms.Label
     Friend WithEvents lblPassword As System.Windows.Forms.Label
-    Friend WithEvents txtID As System.Windows.Forms.TextBox
-    Friend WithEvents lblID As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents lblEmail As System.Windows.Forms.Label
     Friend WithEvents btnLogin As System.Windows.Forms.Button
     Friend WithEvents btnCreate As System.Windows.Forms.Button
-
 End Class

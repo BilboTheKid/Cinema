@@ -25,6 +25,7 @@ Partial Class Movie_select
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Movie_select))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lstSelect = New System.Windows.Forms.ListBox()
+        Me.btnAdmin = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -39,12 +40,21 @@ Partial Class Movie_select
         'lstSelect
         '
         Me.lstSelect.FormattingEnabled = True
-        Me.lstSelect.Items.AddRange(New Object() {"Birdemic: Shock and Terror", "We Are Number One but Every One is Replaced by Prince Charming Dying, Each Time W" & _
+        Me.lstSelect.Items.AddRange(New Object() {"Birdemic: Shock and Terror", "We Are Number One but Every One is Replaced by Prince Charming Dying, Each Time W" &
                 "ith More Distortion", "Santa Claus Conquers the Martians", "Pirates of the Carribean: Rottenbeard and the Net", "Heil Honey i'm Home", "Breakin' 2: Electric Boogaloo", " "})
         Me.lstSelect.Location = New System.Drawing.Point(12, 25)
         Me.lstSelect.Name = "lstSelect"
         Me.lstSelect.Size = New System.Drawing.Size(536, 82)
         Me.lstSelect.TabIndex = 2
+        '
+        'btnAdmin
+        '
+        Me.btnAdmin.Location = New System.Drawing.Point(12, 113)
+        Me.btnAdmin.Name = "btnAdmin"
+        Me.btnAdmin.Size = New System.Drawing.Size(536, 23)
+        Me.btnAdmin.TabIndex = 3
+        Me.btnAdmin.Text = "Admin Screen"
+        Me.btnAdmin.UseVisualStyleBackColor = True
         '
         'Movie_select
         '
@@ -52,7 +62,8 @@ Partial Class Movie_select
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(564, 109)
+        Me.ClientSize = New System.Drawing.Size(558, 142)
+        Me.Controls.Add(Me.btnAdmin)
         Me.Controls.Add(Me.lstSelect)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Movie_select"
@@ -63,4 +74,5 @@ Partial Class Movie_select
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lstSelect As System.Windows.Forms.ListBox
+    Friend WithEvents btnAdmin As Button
 End Class

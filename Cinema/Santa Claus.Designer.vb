@@ -28,13 +28,14 @@ Partial Class Santa_Claus
         Me.lblSanta = New System.Windows.Forms.Label()
         Me.txtSantaInfo = New System.Windows.Forms.RichTextBox()
         Me.lblSantaBook = New System.Windows.Forms.Label()
-        Me.btnSantaNew = New System.Windows.Forms.Button()
-        Me.btnSantaBuy = New System.Windows.Forms.Button()
-        Me.lstSantaAge = New System.Windows.Forms.ListBox()
-        Me.txtSantaTotalPrice = New System.Windows.Forms.TextBox()
-        Me.txtSantaOAPTotal = New System.Windows.Forms.TextBox()
-        Me.txtSantaChildTotal = New System.Windows.Forms.TextBox()
-        Me.txtSantaAdultTotal = New System.Windows.Forms.TextBox()
+        Me.btnNew = New System.Windows.Forms.Button()
+        Me.btnBuy = New System.Windows.Forms.Button()
+        Me.lstAge = New System.Windows.Forms.ListBox()
+        Me.txtTotalPrice = New System.Windows.Forms.TextBox()
+        Me.txtOAPTotal = New System.Windows.Forms.TextBox()
+        Me.txtChildTotal = New System.Windows.Forms.TextBox()
+        Me.txtAdultTotal = New System.Windows.Forms.TextBox()
+        Me.btnMvSel = New System.Windows.Forms.Button()
         CType(Me.shkSantaTrailer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -84,66 +85,75 @@ Partial Class Santa_Claus
         Me.lblSantaBook.TabIndex = 5
         Me.lblSantaBook.Text = "Buy Tickets"
         '
-        'btnSantaNew
+        'btnNew
         '
-        Me.btnSantaNew.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnSantaNew.Location = New System.Drawing.Point(170, 199)
-        Me.btnSantaNew.Name = "btnSantaNew"
-        Me.btnSantaNew.Size = New System.Drawing.Size(142, 43)
-        Me.btnSantaNew.TabIndex = 6
-        Me.btnSantaNew.Text = "Add Ticket"
-        Me.btnSantaNew.UseVisualStyleBackColor = False
+        Me.btnNew.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnNew.Location = New System.Drawing.Point(170, 199)
+        Me.btnNew.Name = "btnNew"
+        Me.btnNew.Size = New System.Drawing.Size(142, 43)
+        Me.btnNew.TabIndex = 6
+        Me.btnNew.Text = "Add Ticket"
+        Me.btnNew.UseVisualStyleBackColor = False
         '
-        'btnSantaBuy
+        'btnBuy
         '
-        Me.btnSantaBuy.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnSantaBuy.Location = New System.Drawing.Point(170, 272)
-        Me.btnSantaBuy.Name = "btnSantaBuy"
-        Me.btnSantaBuy.Size = New System.Drawing.Size(142, 46)
-        Me.btnSantaBuy.TabIndex = 7
-        Me.btnSantaBuy.Text = "Purchase"
-        Me.btnSantaBuy.UseVisualStyleBackColor = False
+        Me.btnBuy.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnBuy.Location = New System.Drawing.Point(170, 272)
+        Me.btnBuy.Name = "btnBuy"
+        Me.btnBuy.Size = New System.Drawing.Size(142, 46)
+        Me.btnBuy.TabIndex = 7
+        Me.btnBuy.Text = "Purchase"
+        Me.btnBuy.UseVisualStyleBackColor = False
         '
-        'lstSantaAge
+        'lstAge
         '
-        Me.lstSantaAge.FormattingEnabled = True
-        Me.lstSantaAge.Items.AddRange(New Object() {"Child" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "£3.50", "Adult" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "£5.95", "OAP" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "£4.95"})
-        Me.lstSantaAge.Location = New System.Drawing.Point(12, 199)
-        Me.lstSantaAge.Name = "lstSantaAge"
-        Me.lstSantaAge.Size = New System.Drawing.Size(152, 43)
-        Me.lstSantaAge.TabIndex = 8
+        Me.lstAge.FormattingEnabled = True
+        Me.lstAge.Items.AddRange(New Object() {"Child" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "£3.50", "Adult" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "£5.95", "OAP" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "£4.95"})
+        Me.lstAge.Location = New System.Drawing.Point(12, 199)
+        Me.lstAge.Name = "lstAge"
+        Me.lstAge.Size = New System.Drawing.Size(152, 43)
+        Me.lstAge.TabIndex = 8
         '
-        'txtSantaTotalPrice
+        'txtTotalPrice
         '
-        Me.txtSantaTotalPrice.Location = New System.Drawing.Point(170, 248)
-        Me.txtSantaTotalPrice.Name = "txtSantaTotalPrice"
-        Me.txtSantaTotalPrice.ReadOnly = True
-        Me.txtSantaTotalPrice.Size = New System.Drawing.Size(142, 20)
-        Me.txtSantaTotalPrice.TabIndex = 9
+        Me.txtTotalPrice.Location = New System.Drawing.Point(170, 248)
+        Me.txtTotalPrice.Name = "txtTotalPrice"
+        Me.txtTotalPrice.ReadOnly = True
+        Me.txtTotalPrice.Size = New System.Drawing.Size(142, 20)
+        Me.txtTotalPrice.TabIndex = 9
         '
-        'txtSantaOAPTotal
+        'txtOAPTotal
         '
-        Me.txtSantaOAPTotal.Location = New System.Drawing.Point(12, 298)
-        Me.txtSantaOAPTotal.Name = "txtSantaOAPTotal"
-        Me.txtSantaOAPTotal.ReadOnly = True
-        Me.txtSantaOAPTotal.Size = New System.Drawing.Size(152, 20)
-        Me.txtSantaOAPTotal.TabIndex = 10
+        Me.txtOAPTotal.Location = New System.Drawing.Point(12, 298)
+        Me.txtOAPTotal.Name = "txtOAPTotal"
+        Me.txtOAPTotal.ReadOnly = True
+        Me.txtOAPTotal.Size = New System.Drawing.Size(152, 20)
+        Me.txtOAPTotal.TabIndex = 10
         '
-        'txtSantaChildTotal
+        'txtChildTotal
         '
-        Me.txtSantaChildTotal.Location = New System.Drawing.Point(12, 248)
-        Me.txtSantaChildTotal.Name = "txtSantaChildTotal"
-        Me.txtSantaChildTotal.ReadOnly = True
-        Me.txtSantaChildTotal.Size = New System.Drawing.Size(152, 20)
-        Me.txtSantaChildTotal.TabIndex = 11
+        Me.txtChildTotal.Location = New System.Drawing.Point(12, 248)
+        Me.txtChildTotal.Name = "txtChildTotal"
+        Me.txtChildTotal.ReadOnly = True
+        Me.txtChildTotal.Size = New System.Drawing.Size(152, 20)
+        Me.txtChildTotal.TabIndex = 11
         '
-        'txtSantaAdultTotal
+        'txtAdultTotal
         '
-        Me.txtSantaAdultTotal.Location = New System.Drawing.Point(12, 272)
-        Me.txtSantaAdultTotal.Name = "txtSantaAdultTotal"
-        Me.txtSantaAdultTotal.ReadOnly = True
-        Me.txtSantaAdultTotal.Size = New System.Drawing.Size(152, 20)
-        Me.txtSantaAdultTotal.TabIndex = 12
+        Me.txtAdultTotal.Location = New System.Drawing.Point(12, 272)
+        Me.txtAdultTotal.Name = "txtAdultTotal"
+        Me.txtAdultTotal.ReadOnly = True
+        Me.txtAdultTotal.Size = New System.Drawing.Size(152, 20)
+        Me.txtAdultTotal.TabIndex = 12
+        '
+        'btnMvSel
+        '
+        Me.btnMvSel.Location = New System.Drawing.Point(12, 324)
+        Me.btnMvSel.Name = "btnMvSel"
+        Me.btnMvSel.Size = New System.Drawing.Size(75, 23)
+        Me.btnMvSel.TabIndex = 14
+        Me.btnMvSel.Text = "Back"
+        Me.btnMvSel.UseVisualStyleBackColor = True
         '
         'Santa_Claus
         '
@@ -151,14 +161,15 @@ Partial Class Santa_Claus
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(858, 327)
-        Me.Controls.Add(Me.txtSantaAdultTotal)
-        Me.Controls.Add(Me.txtSantaChildTotal)
-        Me.Controls.Add(Me.txtSantaOAPTotal)
-        Me.Controls.Add(Me.txtSantaTotalPrice)
-        Me.Controls.Add(Me.lstSantaAge)
-        Me.Controls.Add(Me.btnSantaBuy)
-        Me.Controls.Add(Me.btnSantaNew)
+        Me.ClientSize = New System.Drawing.Size(858, 357)
+        Me.Controls.Add(Me.btnMvSel)
+        Me.Controls.Add(Me.txtAdultTotal)
+        Me.Controls.Add(Me.txtChildTotal)
+        Me.Controls.Add(Me.txtOAPTotal)
+        Me.Controls.Add(Me.txtTotalPrice)
+        Me.Controls.Add(Me.lstAge)
+        Me.Controls.Add(Me.btnBuy)
+        Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.lblSantaBook)
         Me.Controls.Add(Me.txtSantaInfo)
         Me.Controls.Add(Me.lblSanta)
@@ -176,11 +187,12 @@ Partial Class Santa_Claus
     Friend WithEvents lblSanta As System.Windows.Forms.Label
     Friend WithEvents txtSantaInfo As System.Windows.Forms.RichTextBox
     Friend WithEvents lblSantaBook As System.Windows.Forms.Label
-    Friend WithEvents btnSantaNew As System.Windows.Forms.Button
-    Friend WithEvents btnSantaBuy As System.Windows.Forms.Button
-    Friend WithEvents lstSantaAge As System.Windows.Forms.ListBox
-    Friend WithEvents txtSantaTotalPrice As System.Windows.Forms.TextBox
-    Friend WithEvents txtSantaOAPTotal As System.Windows.Forms.TextBox
-    Friend WithEvents txtSantaChildTotal As System.Windows.Forms.TextBox
-    Friend WithEvents txtSantaAdultTotal As System.Windows.Forms.TextBox
+    Friend WithEvents btnNew As System.Windows.Forms.Button
+    Friend WithEvents btnBuy As System.Windows.Forms.Button
+    Friend WithEvents lstAge As System.Windows.Forms.ListBox
+    Friend WithEvents txtTotalPrice As System.Windows.Forms.TextBox
+    Friend WithEvents txtOAPTotal As System.Windows.Forms.TextBox
+    Friend WithEvents txtChildTotal As System.Windows.Forms.TextBox
+    Friend WithEvents txtAdultTotal As System.Windows.Forms.TextBox
+    Friend WithEvents btnMvSel As Button
 End Class

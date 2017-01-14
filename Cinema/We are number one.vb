@@ -1,5 +1,4 @@
 ﻿Public Class We_are_number_one
-    Public TicketsOwned As Integer
     Dim intTicketTotal As Integer
     Private Sub We_are_number_one_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -37,5 +36,9 @@
         Me.Hide()
         Screen1.Show()
         TicketsOwned = intTicketTotal
+    End Sub
+    Private Sub btnMvSel_Click(sender As Object, e As EventArgs) Handles btnMvSel.Click
+        Me.Hide()
+        Movie_select.Show()
     End Sub
 End Class

@@ -30,7 +30,7 @@ Partial Class Screen2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(809, 353)
+        Me.ClientSize = New System.Drawing.Size(809, 422)
         Me.Name = "Screen2"
         Me.Text = "Screen2"
         Me.ResumeLayout(False)

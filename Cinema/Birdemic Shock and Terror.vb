@@ -1,5 +1,4 @@
 ﻿Public Class Birdemic_Shock_and_Terror
-    Public TicketsOwned As Integer
     Dim intTicketTotal As Integer
     Private Sub Birdemic_Shock_and_Terror_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -32,10 +31,23 @@
             dblPrice = dblPrice + 4.95
             txtTotalPrice.Text = "£" & dblPrice
         End If
+        PubVar.BirdRevenue = dblPrice
     End Sub
     Private Sub btnBuy_Click(sender As Object, e As EventArgs) Handles btnBuy.Click
+        Dim revenue
         Me.Hide()
         Screen2.Show()
         TicketsOwned = intTicketTotal
+        revenue = Login.readInFilm("Bird")
+        revenue += PubVar.BirdRevenue
+        Login.writeOutFilm("Bird", revenue)
+    End Sub
+    Private Sub btnMvSel_Click(sender As Object, e As EventArgs) Handles btnMvSel.Click
+        Me.Hide()
+        Movie_select.Show()
+    End Sub
+    Private Sub SaveToTextFile()
+        Dim strFileName As String
+        strFileName = "Revenue_Bird.txt"
     End Sub
 End Class

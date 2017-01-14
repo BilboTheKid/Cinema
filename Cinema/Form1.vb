@@ -5,10 +5,6 @@ Public Class Login
     Dim myfilereader As StreamReader
     Dim strFileName As String
     Dim intNumRecs As Integer
-    Dim intUserID As Integer
-    Dim strUsername As String
-    Dim strPassword As String
-    Dim strEmail As String
     Structure CustomRecType
         Dim intUserID As Integer
         Dim strUsername As String
@@ -16,6 +12,19 @@ Public Class Login
         Dim strEmail As String
     End Structure
     Dim MyUserRecArray() As CustomRecType
+    Friend Shared Function readInFilm(ByVal nameOfFilm) As String
+
+        Login.strFileName = "Revenue_" + nameOfFilm + ".txt"
+        Login.myfilereader = New StreamReader(Login.strFileName)
+        readInFilm = Login.myfilereader.ReadLine()
+        Login.myfilereader.Close()
+    End Function
+    Friend Shared Sub writeOutFilm(ByVal nameOfFilm As String, ByVal revenue As String)
+        Login.strFileName = "Revenue_" + nameOfFilm + ".txt"
+        Login.myfilewriter = New StreamWriter(Login.strFileName)
+        Login.myfilewriter.WriteLine(revenue)
+        Login.myfilewriter.Close()
+    End Sub
     Private Sub readindata()
         'Reads data from the program'
         Dim intCounter As Integer
@@ -32,7 +41,6 @@ Public Class Login
             MyUserRecArray(intCounter).strEmail = myfilereader.ReadLine()
         Loop
         myfilereader.Close()
-        txtID.Text = intNumRecs + 1
     End Sub
     Private Sub SaveToTextFile()
         'Writes the data from the program into a text file'
@@ -60,7 +68,7 @@ Public Class Login
         strEmail = Me.txtEmail.Text
         readindata()
         intNumRecs = intNumRecs + 1
-        txtID.Text = intNumRecs
+
         ReDim Preserve MyUserRecArray(intNumRecs)
         'Saves the user details into an array'
         MyUserRecArray(intNumRecs).intUserID = intNumRecs
@@ -87,6 +95,7 @@ Public Class Login
         strUsername = Me.txtUsername.Text
         strPassword = Me.txtPassword.Text
         strEmail = Me.txtEmail.Text
+        strCurUser = Me.txtUsername.Text
         For intCounter = 1 To intNumRecs
             If strUsername = MyUserRecArray(intCounter).strUsername Then
                 BooUsernameCorrect = True

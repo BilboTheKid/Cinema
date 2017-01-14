@@ -34,6 +34,7 @@ Partial Class We_are_number_one
         Me.txtAdultTotal = New System.Windows.Forms.TextBox()
         Me.txtChildTotal = New System.Windows.Forms.TextBox()
         Me.lstAge = New System.Windows.Forms.ListBox()
+        Me.btnMvSel = New System.Windows.Forms.Button()
         CType(Me.AxShockwaveFlash1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -133,6 +134,15 @@ Partial Class We_are_number_one
         Me.lstAge.Size = New System.Drawing.Size(133, 43)
         Me.lstAge.TabIndex = 13
         '
+        'btnMvSel
+        '
+        Me.btnMvSel.Location = New System.Drawing.Point(780, 152)
+        Me.btnMvSel.Name = "btnMvSel"
+        Me.btnMvSel.Size = New System.Drawing.Size(75, 23)
+        Me.btnMvSel.TabIndex = 20
+        Me.btnMvSel.Text = "Back"
+        Me.btnMvSel.UseVisualStyleBackColor = True
+        '
         'We_are_number_one
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -140,6 +150,7 @@ Partial Class We_are_number_one
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1074, 469)
+        Me.Controls.Add(Me.btnMvSel)
         Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.btnBuy)
         Me.Controls.Add(Me.txtTotalPrice)
@@ -169,4 +180,5 @@ Partial Class We_are_number_one
     Friend WithEvents txtAdultTotal As TextBox
     Friend WithEvents txtChildTotal As TextBox
     Friend WithEvents lstAge As ListBox
+    Friend WithEvents btnMvSel As Button
 End Class

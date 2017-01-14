@@ -24,4 +24,10 @@
             Boogaloo.Show()
         End If
     End Sub
+    Private Sub btnAdmin_Click_1(sender As Object, e As EventArgs) Handles btnAdmin.Click
+        If strCurUser = "AdminSandler" Then
+            Me.Hide()
+            Admin.Show()
+        End If
+    End Sub
 End Class
